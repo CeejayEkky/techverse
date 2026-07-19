@@ -1,7 +1,15 @@
-import products from "../data/products";
+import { useEffect, useState } from "react";
 import ProductCard from "../components/ProdCard";
 
 const FeaturedProducts = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("/data/products.json")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
+
   const featured = products.slice(0, 4);
 
   return (
@@ -11,8 +19,8 @@ const FeaturedProducts = () => {
       <p>Discover some of our best-selling gadgets.</p>
 
       <div className="featured-grid">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product}/>
+        {featured.map((product) => (
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </section>
