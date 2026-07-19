@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "name": "ASUS ROG Zephyrus G16",
+    "category": "Laptop",
+    "price": 3382200,
+    "image": "../assets/p1.jpg",
+    "rating": 5,
+    "description": "Ultra-powerful gaming laptop with OLED display."
+  },
+
+  {
+    "id": 2,
+    "name": "MacBook Air M4",
+    "category": "Laptop",
+    "price": 2621500,
+    "image": "../assets/p2.jpg",
+    "rating": 5,
+    "description": "Apple's lightweight productivity machine."
+  },
+
+  {
+    "id": 3,
+    "name": "Sony WH-1000XM6",
+    "category": "Headphones",
+    "price": 688870,
+    "image": "../assets/p3.png",
+    "rating": 5,
+    "description": "Industry-leading noise cancellation."
+  },
+
+  {
+    "id": 4,
+    "name": "Samsung Galaxy S26 Ultra",
+    "category": "Phone",
+    "price": 2345500,
+    "image": "../assets/p4.webp",
+    "rating": 5,
+    "description": "Premium flagship smartphone."
+  },
+
+  {
+    "id": 5,
+    "name": "Apple Watch Ultra",
+    "category": "Watch",
+    "price": 1380490,
+    "image": "../assets/p5.jpg",
+    "rating": 5,
+    "description": "Adventure-ready smartwatch."
+  },
+
+  {
+    "id": 6,
+    "name": "Logitech MX Master 4",
+    "category": "Accessories",
+    "price": 205693,
+    "image": "../assets/p6.jpg",
+    "rating": 5,
+    "description": "Professional productivity mouse."
+  }
+]
