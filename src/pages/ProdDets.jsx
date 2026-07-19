@@ -1,35 +1,53 @@
 import { useParams } from "react-router-dom";
-import products from "../../public/data/products.json";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import { WishlistContext } from "../context/WishlistContext";
 import { toast } from "react-toastify";
 
 const ProdDets = () => {
   const { id } = useParams();
+
   const { dispatch } = useContext(CartContext);
   const { dispatch: wishlistDispatch } = useContext(WishlistContext);
-  const product = products.find((item) => item.id === Number(id));
+
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    fetch("/data/products.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const foundProduct = data.find(
+          (item) => item.id === Number(id)
+        );
+        setProduct(foundProduct);
+      })
+      .catch((error) => console.error("Error loading product:", error));
+  }, [id]);
 
   const addToCart = () => {
+    if (!product) return;
+
     dispatch({
       type: "ADD_TO_CART",
       payload: product,
     });
+
     toast.success(`${product.name} added to cart!`);
   };
 
   const addToWishlist = () => {
+    if (!product) return;
+
     wishlistDispatch({
       type: "ADD_TO_WISHLIST",
-
       payload: product,
     });
+
     toast.success(`${product.name} added to wishlist!`);
   };
 
   if (!product) {
-    return <h2>Product Not Found.</h2>;
+    return <h2>Loading product...</h2>;
   }
 
   return (
@@ -43,7 +61,7 @@ const ProdDets = () => {
 
         <h3>{product.category}</h3>
 
-        <h2>₦{product.price}</h2>
+        <h2>₦{product.price.toLocaleString()}</h2>
 
         <p>{product.description}</p>
 
