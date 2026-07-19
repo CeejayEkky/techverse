@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import products from "../data/products";
+import products from "/data/products";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { WishlistContext } from "../context/WishlistContext";
