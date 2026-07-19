@@ -4,7 +4,7 @@
     "name": "ASUS ROG Zephyrus G16",
     "category": "Laptop",
     "price": 3382200,
-    "image": "../assets/p1.jpg",
+    "image": "/images/p1.jpg",
     "rating": 5,
     "description": "Ultra-powerful gaming laptop with OLED display."
   },
@@ -14,7 +14,7 @@
     "name": "MacBook Air M4",
     "category": "Laptop",
     "price": 2621500,
-    "image": "../assets/p2.jpg",
+    "image": "/images/p2.jpg",
     "rating": 5,
     "description": "Apple's lightweight productivity machine."
   },
@@ -24,7 +24,7 @@
     "name": "Sony WH-1000XM6",
     "category": "Headphones",
     "price": 688870,
-    "image": "../assets/p3.png",
+    "image": "/images/p3.png",
     "rating": 5,
     "description": "Industry-leading noise cancellation."
   },
@@ -34,7 +34,7 @@
     "name": "Samsung Galaxy S26 Ultra",
     "category": "Phone",
     "price": 2345500,
-    "image": "../assets/p4.webp",
+    "image": "/images/p4.webp",
     "rating": 5,
     "description": "Premium flagship smartphone."
   },
@@ -44,7 +44,7 @@
     "name": "Apple Watch Ultra",
     "category": "Watch",
     "price": 1380490,
-    "image": "../assets/p5.jpg",
+    "image": "/images/p5.jpg",
     "rating": 5,
     "description": "Adventure-ready smartwatch."
   },
@@ -54,7 +54,7 @@
     "name": "Logitech MX Master 4",
     "category": "Accessories",
     "price": 205693,
-    "image": "../assets/p6.jpg",
+    "image": "/images/p6.jpg",
     "rating": 5,
     "description": "Professional productivity mouse."
   }
